@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > header > button {
+    background-color: #865dff;
+    border: 0;
+    margin: 0.5rem;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    width: 1.5rem
+}
+
+.title {
+    font-size: 2rem;
+    color: #E384FF;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.label {
+    color: #E384FF;
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    user-select: none;
+}
+
+.nameInput {
+    background-color: #865dff;
+    margin: 0.1rem;
+    padding: 0.1rem 0.3rem;
+    width: 11.5rem;
+    height: 1.8rem;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    border: 0;
+    -moz-appearance: textfield;
+}
