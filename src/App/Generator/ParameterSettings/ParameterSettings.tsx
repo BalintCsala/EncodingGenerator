@@ -24,8 +24,6 @@ function ParameterSettings({
     canDelete,
     onDelete,
 }: Props) {
-    console.log(parameter, 2);
-
     return (
         <div className={style.container}>
             <header>

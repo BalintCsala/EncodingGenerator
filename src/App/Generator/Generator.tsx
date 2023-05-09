@@ -116,14 +116,16 @@ Values decode(${outputType} encoded) {
 ${decodingLines.join("\n")}
     return decoded;
 }`;
-    console.log(code);
+
+    navigator.clipboard.writeText(code);
 }
 
 function Generator() {
     const [parameters, setParameters] = useState([
         {...defaultParameter, id: 0, name: "parameter0"},
     ]);
-    
+    const [copied, setCopied] = useState(false);
+
     const [lastId, setLastId] = useState(1);
 
     const [outputBitLength, setOutputBitLength] = useState(32);
@@ -176,9 +178,13 @@ function Generator() {
             </div>
             <button
                 className={style.button}
-                onClick={() => generateCode(parameters, outputBitLength)}>
+                onClick={() => {
+                    setCopied(true);
+                    return generateCode(parameters, outputBitLength);
+                }}>
                 Generate
             </button>
+            {copied ? <span>Copied code into clipboard</span> : null}
         </div>
     );
 }
